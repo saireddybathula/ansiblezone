@@ -3,9 +3,9 @@
   become: yes
   hosts: all
   tasks:
-    - name: install java
-      ansible.builtin.apt:
-        name: openjdk-11-jdk
+    - name: install java on redhat
+      ansible.builtin.yum:
+        name: java-11-openjdk
         update_cache: yes
         state: present
         
